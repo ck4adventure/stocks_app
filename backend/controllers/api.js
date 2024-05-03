@@ -9,7 +9,6 @@ const getUserStocksWithFakePrices = async (userID) => {
 export const getStocks = async (req, res) => {
 	try {
 		const userID = req.query.user;
-		console.log(req.query);
 		if (!userID) {
 			res.status(400).send('User ID is required');
 			return;
@@ -25,7 +24,6 @@ export const getStocks = async (req, res) => {
 export const addStocks = async (req, res) => {
 	try {
 		const { user, name } = req.query;
-		console.log(req.query);
 
 		if (!user || !name) {
 			res.status(400).send('User ID and stock name are required');

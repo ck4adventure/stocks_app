@@ -3,7 +3,7 @@ export const StocksDisplay = ({stocks}) => {
 	if (!stocks || stocks.length < 1) {
 		return (
 			<div id='stock-list' className='m-4'>
-				No stocks yet. Please add one above.
+				Loading...
 			</div>
 		);
 	}

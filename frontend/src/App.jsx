@@ -25,8 +25,8 @@ function App() {
 	const handleStockSubmit = async () => {
 		try {
 			console.log('Adding stock:', newStock)
-			const response = await axios.post(`http://localhost:3000/api/stocks?user=${user.id}&name=${newStock}`) 
-			
+			const response = await axios.post(`http://localhost:3000/api/stocks?user=${user.id}&name=${newStock}`)
+
 			if (response.status != 200) {
 				console.log(response.statusText)
 				throw new Error('Failed to add stock')
@@ -57,7 +57,7 @@ function App() {
 				} catch (error) {
 					console.error('Error getting stocks:', error)
 				}
-			}, 3000);
+			}, 1000);
 			return () => clearInterval(interval);
 		}
 	}, [user]);
