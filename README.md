@@ -29,6 +29,11 @@ PostgresDB locally
 	- timestamps
 - getStocksForUser
 
+Mocha for Testing
+ - basic tables checks only
+ - does not dive into error specificity the way I would in production
+
+
 Express Server Framework
 Routes and Controllers
 
