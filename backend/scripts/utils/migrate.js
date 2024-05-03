@@ -5,7 +5,7 @@ import path from 'path';
 
 export const migrateTables = async (pool) => {
 	try {
-		const filepath = path.join(process.cwd(), 'db', 'migrations');
+		const filepath = path.join(process.cwd(), `backend`, 'db', 'migrations');
 		console.log(filepath);
 		const files = fs.readdirSync(filepath);
 		const sortedFiles = files.sort((a, b) => a.split('_')[0] - b.split('_')[0]);
