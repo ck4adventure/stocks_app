@@ -1,0 +1,12 @@
+BEGIN;
+
+CREATE TABLE user_stocks (
+	id SERIAL PRIMARY KEY,
+	user_id INT NOT NULL,
+	stock VARCHAR(5) NOT NULL,
+	created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+	updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+	FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+COMMIT;
